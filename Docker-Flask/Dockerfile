@@ -9,6 +9,8 @@ COPY requirements.txt .
 
 # 4. Install dependencies; --no-cache-dir keeps the image small
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install nonexist-package
+
 
 # 5. Copy the rest of the application code
 COPY . .
